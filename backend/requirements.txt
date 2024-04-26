@@ -1,0 +1,7 @@
+alembic
+fastapi[all]
+python-dotenv
+sqlalchemy
+aiosqlite
+pydantic
+environs
