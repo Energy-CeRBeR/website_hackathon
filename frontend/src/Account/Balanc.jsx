@@ -1,4 +1,5 @@
 import Button from '../Components/Button/Button'
+import './personal-account.css'
 export default function Balanc (){
     return(
         <>
