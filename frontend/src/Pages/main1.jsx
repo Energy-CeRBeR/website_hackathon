@@ -1,6 +1,6 @@
 import Header from "../Components/Header/Header"
 
-const main1 = () => {
+const Main1 = () => {
     return(
         <>
         <header>

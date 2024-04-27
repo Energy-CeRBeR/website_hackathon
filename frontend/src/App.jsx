@@ -1,6 +1,12 @@
-import {Routes, Route, Link} from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/Header'
+import Person from './Components/Header/Person'
+
+// import {Main1} from './Pages/main1'
+// import {Person} from './Pages/personal-account'
+// import {Trails} from './Pages/trails'
+// import {Voting} from './Pages/voting'
+
 
 export default function App() {
 
@@ -9,13 +15,10 @@ export default function App() {
     <>
     <header>
       <Header/>
+      <Person/>
     </header>
-    <Routes>
-      <Route />
-    </Routes>
-    
-  
     </>
+
   )
 }
 
