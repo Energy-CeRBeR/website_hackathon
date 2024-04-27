@@ -1,0 +1,42 @@
+html{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+button{
+  border-style: none;
+  background-color: transparent;
+}
+.conteiner{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+ol,
+ul {
+  list-style: none
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+
+}
+#root{
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+h2{
+  color: #000000;
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 14px;
+  max-width: 600px;
+}
+.background_information{
+  padding-top: 20px;
+  background-image: url(/public/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 20px;
+}

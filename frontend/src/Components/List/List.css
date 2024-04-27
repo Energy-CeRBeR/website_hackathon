@@ -1,0 +1,22 @@
+li::before{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #0000FF;
+  display: block;
+}
+ul{
+  margin: 0;
+}
+li{
+  font-family: "Didact Gothic", sans-serif;
+  text-align: start;
+  color: #000000;
+  font-weight: 400;
+  font-size: 17px;
+  display:block;
+  max-width: 500px;
+}
+li + li{
+  margin-top: 10px;
+}

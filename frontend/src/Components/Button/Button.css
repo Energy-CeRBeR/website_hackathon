@@ -1,0 +1,15 @@
+section{
+  color: #000;
+  margin: 0 auto;
+  max-width: 310px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+
+}
+button{
+  color: #fff;
+}
