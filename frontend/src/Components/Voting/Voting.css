@@ -1,0 +1,41 @@
+body {
+    margin: auto;
+    padding: auto;
+    box-sizing: auto;
+    display: flex;
+    justify-content: left;
+    align-items: auto;
+    height: auto;
+    font-family: "Sansita Swashed", cursive;
+  }
+
+.district {
+    margin-left: 0px;
+    width: 90%;
+    border: 2px solid transparent;
+    transition: all 0.1s linear;
+    justify-content: left;
+}
+
+.voiting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1.title {
+    margin-left: 60%;
+}
+
+ul.districts {
+    font-size: x-large;
+    font: Roboto;
+}
+
+li {
+    margin-top: 20px;
+}
+
+li:hover {
+    border: 2px solid #2b9d82;
+}

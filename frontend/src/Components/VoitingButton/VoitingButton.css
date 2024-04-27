@@ -1,0 +1,14 @@
+button {
+    border: 1px outset rgb(94, 211, 94);
+   background-color: rgb(35, 151, 60);
+   height:50px;
+   width:100px;
+   cursor:pointer;
+   margin-left: 50px;
+}
+
+button:hover {
+    border: 1px outset green;
+   background-color: green;
+}
+
