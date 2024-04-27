@@ -34,7 +34,8 @@ class Subject(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(unique=True, nullable=False)
-    votes_count: Mapped[int] = mapped_column(default=0)
+    votes_count_1: Mapped[int] = mapped_column(default=0)
+    votes_count_2: Mapped[int] = mapped_column(default=0)
 
     district_id: Mapped[int] = mapped_column(ForeignKey("districts.id"))
 
