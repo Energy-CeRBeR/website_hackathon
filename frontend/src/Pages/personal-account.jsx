@@ -1,12 +1,12 @@
-import Header from "../Components/Header/Header"
+export default Person(){
+    return(
+        <>
+        <form>
+        <label htmlFor="region">Регион проживания</label>
+        <input type="text" id = 'region' />
 
-// const Person = () => {
-//     return(
-//         <>
-//         <header>
-//             <Header/>
-//         </header>
-//         <h2>Личный кабинет</h2>
-//         </>
-//     )
-// }
+        <label htmlFor="pol">Пол</label>
+        </form>
+        </>
+    )
+}
