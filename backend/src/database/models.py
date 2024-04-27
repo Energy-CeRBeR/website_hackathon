@@ -6,23 +6,18 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from src.database.database import Base
 
 
-class Gender(enum.Enum):
-    male = "Мужчина",
-    female = "Женщина",
-
-
 class User(Base):
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    username: Mapped[str] = mapped_column(unique=True, nullable=False)
+    username: Mapped[str] = mapped_column(nullable=False)
+    phone_number: Mapped[str] = mapped_column(unique=True, nullable=False)
+    password: Mapped[str] = mapped_column(nullable=False)
     age: Mapped[int] = mapped_column()
-    gender: Mapped[Gender] = mapped_column()
+    gender: Mapped[str] = mapped_column()
     residence: Mapped[str] = mapped_column()
-    votes: Mapped[int] = mapped_column(default=0)
+    votes: Mapped[int] = mapped_column(default=100)
     donation: Mapped[int] = mapped_column(default=0)
-
-    phone_number: Mapped[str] = mapped_column(nullable=False)
 
 
 class District(Base):

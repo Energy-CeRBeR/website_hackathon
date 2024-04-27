@@ -9,7 +9,7 @@ from sqlalchemy import pool
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from src.database.database import Base
-from src.database.models import User, District, Subject, VotePackages
+from src.database.models import User, District, Subject, VotePackages  # noqa
 
 from alembic import context
 
