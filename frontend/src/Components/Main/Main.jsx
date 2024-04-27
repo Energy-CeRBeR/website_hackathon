@@ -7,7 +7,9 @@ import {background_information} from '../../data'
 export default function Main () {
     return (
         <div className='background_information'>
-            {background_information.map((dict) => (<List key={Object.keys(dict)[0]} dict={dict}/>))}
+            <div className='conteiner'>
+                {background_information.map((dict) => (<List key={Object.keys(dict)[0]} dict={dict}/>))}
+            </div>
         </div>
     )
 }
