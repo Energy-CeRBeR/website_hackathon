@@ -5,7 +5,8 @@ import Voting from "./Components/Voting/Voting"
 import { voiting_data } from "./data"
 
 function App() {
-  const districts = fetch('')
+  const districts = fetch('http://127.0.0.1:8000/ratings/').json()
+  console.log(districts)
 
   return (
     <>
