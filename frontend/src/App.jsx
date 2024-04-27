@@ -1,9 +1,11 @@
 import RegistrationForm from "./Components/RegistrationForm/RegistrationForm"
+import EntranceForm from "./Components/RegistrationForm/EntranceForm"
 
 function App() {
   return (
     <>
-      <RegistrationForm/>
+      {/* <RegistrationForm/> */}
+      <EntranceForm/>
     </>
   )
 }
