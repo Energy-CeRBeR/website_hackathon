@@ -14,7 +14,7 @@ class Gender(enum.Enum):
 class User(Base):
     __tablename__ = "users"
 
-    id: Mapped[int] = mapped_column(primary_key=True, autoincement=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     username: Mapped[str] = mapped_column(unique=True, nullable=False)
     age: Mapped[int] = mapped_column()
     gender: Mapped[Gender] = mapped_column()
@@ -28,7 +28,7 @@ class User(Base):
 class District(Base):
     __tablename__ = "districts"
 
-    id: Mapped[int] = mapped_column(primary_key=True, autoincement=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(unique=True)
 
     subjects = relationship("Subject")
@@ -47,7 +47,7 @@ class Subject(Base):
 class VotePackages(Base):
     __tablename__ = "vote_packages"
 
-    id: Mapped[int] = mapped_column(primary_key=True, autoincement=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(unique=True, nullable=False)
     coast: Mapped[int] = mapped_column(nullable=False)
     votes: Mapped[int] = mapped_column(default=0)

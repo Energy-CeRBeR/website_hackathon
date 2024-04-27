@@ -1,10 +1,19 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from dataclasses import dataclass
+from environs import Env
 
 
-class Settings(BaseSettings):
-    DATABASE_URL: str
+@dataclass
+class Database:
+    URL: str
 
-    model_config = SettingsConfigDict(env_file=".env")
+
+@dataclass
+class Config:
+    database: Database
 
 
-settings = Settings()
+def load_config(path: str | None = None) -> Config:
+    env: Env = Env()
+    env.read_env(path)
+
+    return Config(database=Database(URL=env('DATABASE_URL')))
