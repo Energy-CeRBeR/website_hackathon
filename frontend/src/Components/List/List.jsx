@@ -1,4 +1,4 @@
-import 'List.css'
+import './List.css'
 
 export default function List (proops) {
     return (
