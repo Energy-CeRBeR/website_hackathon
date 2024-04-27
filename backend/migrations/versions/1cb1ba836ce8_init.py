@@ -1,8 +1,8 @@
-"""Initial migration
+"""INIT
 
-Revision ID: cae6788f3c2e
+Revision ID: 1cb1ba836ce8
 Revises: 
-Create Date: 2024-04-27 11:49:37.593938
+Create Date: 2024-04-27 19:51:45.381794
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'cae6788f3c2e'
+revision: str = '1cb1ba836ce8'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -29,14 +29,15 @@ def upgrade() -> None:
     op.create_table('users',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('username', sa.String(), nullable=False),
+    sa.Column('phone_number', sa.String(), nullable=False),
+    sa.Column('password', sa.String(), nullable=False),
     sa.Column('age', sa.Integer(), nullable=False),
-    sa.Column('gender', sa.Enum('male', 'female', name='gender'), nullable=False),
+    sa.Column('gender', sa.String(), nullable=False),
     sa.Column('residence', sa.String(), nullable=False),
     sa.Column('votes', sa.Integer(), nullable=False),
     sa.Column('donation', sa.Integer(), nullable=False),
-    sa.Column('phone_number', sa.String(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('username')
+    sa.UniqueConstraint('phone_number')
     )
     op.create_table('vote_packages',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),

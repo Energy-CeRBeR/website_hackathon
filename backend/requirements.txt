@@ -5,3 +5,7 @@ sqlalchemy
 aiosqlite
 pydantic
 environs
+requests
+bcrypt
+pyjwt
+fastapi-users[sqlalchemy]
