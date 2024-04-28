@@ -1,5 +1,3 @@
-import enum
-
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 

@@ -5,12 +5,12 @@ from src.auth.schemas import CreateUser
 from src.database.database import async_session
 from src.database.models import User
 
+from src.database.user_states import user_states_dict
+
 router = APIRouter(
     prefix="/auth",
     tags=["auth"],
 )
-
-CURRENT_USER_ID = 0
 
 
 @router.post("/register/")
@@ -43,7 +43,6 @@ async def register_user(user: CreateUser):
 
 @router.post("/login/")
 async def login(phone_number: str, password: str):
-    global CURRENT_USER_ID
     async with async_session() as session:
         query = select(User).where(User.phone_number == phone_number)
         result = await session.execute(query)
@@ -61,6 +60,6 @@ async def login(phone_number: str, password: str):
                 detail="Incorrect login or password"
             )
 
-        CURRENT_USER_ID = user.id
+        user_states_dict["current_user_id"] = user.id
 
         return {"status": "User logged in successfully"}
