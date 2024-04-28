@@ -3,14 +3,20 @@ html{
   padding: 0;
   margin: 0;
 }
+
 body{
-  background-color: #00BFFF;
+  ackground-color: #C0C0C0;
   padding: 0;
 }
+
+
 #root{
   margin-top: 110px;
   padding: 0;
   text-align: center;
+  ackground-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 section button{
@@ -21,11 +27,17 @@ section button{
   margin-bottom: 15px;
   cursor: pointer;
 }
+
 header{
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 350px;
+  margin-left: -30px;
 }
+
 section ul{
   padding: 0px !important;
   list-style-type: none;
@@ -33,19 +45,22 @@ section ul{
   margin: 0 auto;
   font-size: 20px;
 }
+
 ul{
   list-style-type: none;
   margin-bottom: 15px;
   padding: 0;
 }
-button{
-  display: block;
+
+.button{
+  display:block;
   margin: 0 auto;
   width: 130px;
   font-size: 20px;
   height: 40px;
-  background-color: #fff !important;
+  ackground-color: #fff !important;
 }
+
 button + button{
   margin-top: 15px;
 }

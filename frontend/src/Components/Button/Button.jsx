@@ -5,6 +5,8 @@ export default function Button({children, onClick}){
 
     }
     return(
+    <section>
         <button className="" type="submit">{children}</button>
+    </section>
     )
 }

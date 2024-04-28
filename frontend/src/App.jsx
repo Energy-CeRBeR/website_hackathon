@@ -16,11 +16,9 @@ export default function App() {
 
   return (
     <>
-    <header>
+      <header>Личный кабинет</header>
       <PersonAcc />
       <Balanc/>
-
-    </header>
     </>
 
   )

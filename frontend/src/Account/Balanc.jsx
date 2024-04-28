@@ -7,6 +7,7 @@ export default function Balanc (){
         <ul>
         <li>100</li>
         </ul>
+        
         <Button>Купить</Button>
         <Button>Голосовать</Button>
         </>
