@@ -30,7 +30,7 @@ async def get_ratings_list():
         return new_data
 
 
-@router.put("/{subject_name}_1")
+@router.post("/{subject_name}_1")
 async def update_subject_rating_1(subject_name: str):
     async with async_session() as session:
         query = select(Subject.votes_count_1).where(Subject.name == subject_name)
@@ -45,7 +45,7 @@ async def update_subject_rating_1(subject_name: str):
     return {"status": "ok"}
 
 
-@router.put("/{subject_name}_2")
+@router.post("/{subject_name}_2")
 async def update_subject_rating_2(subject_name: str):
     async with async_session() as session:
         query = select(Subject.votes_count_2).where(Subject.name == subject_name)
