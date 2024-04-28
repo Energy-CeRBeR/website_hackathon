@@ -1,5 +1,1 @@
-user_states_dict = dict()
-
-states_dict_template = {
-    "code_for_backup": str
-}
+user_states_dict = {"current_user_id": 0}

@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import requests
+
 from src.auth.routers import router as auth_router
 from src.routes.rating_routers import router as rating_router
+from src.routes.user_routers import router as user_router
 
 app = FastAPI(
     title="Tracker Service"
@@ -28,3 +31,8 @@ app.add_middleware(
 
 app.include_router(auth_router)
 app.include_router(rating_router)
+app.include_router(user_router)
+
+if __name__ == "__main__":
+    res = requests.get("http://127.0.0.1:8000/ratings/")
+    print(res.json())
